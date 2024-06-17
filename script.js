@@ -25,6 +25,24 @@ document.addEventListener("DOMContentLoaded", () => {
                     const themeDiv = document.createElement('div');
                     themeDiv.classList.add('theme');
                     themeDiv.innerHTML = `<p>Theme: ${cssFile}</p>`;
+
+                    // Add images
+                    const img1 = document.createElement('img');
+                    img1.src = `${basePath}${version}/images/theme1.jpg`;
+                    img1.alt = 'Theme 1 Image';
+                    themeDiv.appendChild(img1);
+
+                    const img2 = document.createElement('img');
+                    img2.src = `${basePath}${version}/images/theme2.jpg`;
+                    img2.alt = 'Theme 2 Image';
+                    themeDiv.appendChild(img2);
+
+                    // Add videos (YouTube embed)
+                    const videoDiv = document.createElement('div');
+                    videoDiv.classList.add('video-container');
+                    videoDiv.innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID_HERE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+                    themeDiv.appendChild(videoDiv);
+
                     versionDiv.appendChild(themeDiv);
                 });
             })
